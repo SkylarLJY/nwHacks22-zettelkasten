@@ -2,8 +2,6 @@ const express = require('express')
 const app = express()
 
 app.use(express.json())
-const express = require('express')
-const app = express()
 const cors = require('cors')
 
 const requestLogger = (request, response, next) => {
