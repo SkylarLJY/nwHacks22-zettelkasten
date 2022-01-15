@@ -2,6 +2,9 @@ const express = require('express')
 const app = express()
 
 app.use(express.json())
+const express = require('express')
+const app = express()
+const cors = require('cors')
 
 const requestLogger = (request, response, next) => {
     console.log('Method:', request.method)
@@ -10,7 +13,9 @@ const requestLogger = (request, response, next) => {
     console.log('---')
     next()
 }
-
+app.use(express.static('build'))
+app.use(cors())
+app.use(express.json())
 app.use(requestLogger)
 
 let notes = [
