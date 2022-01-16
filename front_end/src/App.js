@@ -1,11 +1,15 @@
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import Notes from './pages/Notes'
 import Create from './pages/Create'
+<<<<<<< HEAD
+import NoteShare from './pages/NoteShare'
+=======
 import Search from './pages/Search'
 import Trash from './pages/Trash'
 import Help from './pages/Help'
 import Slipbox from './pages/Slipbox'
 import DatabasePage from './pages/Database'
+>>>>>>> fancy
 import { createMuiTheme, ThemeProvider } from '@material-ui/core'
 import { purple } from '@material-ui/core/colors'
 import Layout from './components/Layout'
@@ -32,6 +36,9 @@ function App() {
       <Router>
         <Layout>
           <Switch>
+          <Route path="/share">
+              <NoteShare />
+            </Route>
             <Route exact path="/">
               <Notes />
             </Route>
@@ -41,6 +48,9 @@ function App() {
             <Route path="/create">
               <Create />
             </Route>
+<<<<<<< HEAD
+            
+=======
             <Route path="/slipbox">
               <Slipbox />
             </Route>
@@ -53,6 +63,7 @@ function App() {
             <Route path="/help">
               <Help />
             </Route>
+>>>>>>> fancy
           </Switch>
         </Layout>
       </Router>

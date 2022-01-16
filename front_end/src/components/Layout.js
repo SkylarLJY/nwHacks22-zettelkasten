@@ -7,7 +7,7 @@ import List from '@material-ui/core/List'
 import ListItem from '@material-ui/core/ListItem'
 import ListItemIcon from '@material-ui/core/ListItemIcon'
 import ListItemText from '@material-ui/core/ListItemText'
-import { AddCircleOutlineOutlined, SubjectOutlined } from '@material-ui/icons'
+import { AddCircleOutlineOutlined, SubjectOutlined, PeopleOutlined } from '@material-ui/icons'
 import DeleteOutlineIcon from '@mui/icons-material/DeleteOutline';
 import SearchIcon from '@mui/icons-material/Search';
 import StickyNote2Icon from '@mui/icons-material/StickyNote2';
@@ -83,7 +83,12 @@ export default function Layout({ children }) {
       path: '/create'
     },
     {
-      text: 'slipboxes',
+      text: 'Shared Notes',
+      icon: <PeopleOutlined color="secondary" />,
+      path: '/share'
+    },
+    {
+      text: 'Slipboxes',
       icon: <StickyNote2Icon color="secondary" />,
       path: '/slipbox'
     },
@@ -115,7 +120,7 @@ export default function Layout({ children }) {
       >
         <Toolbar>
           <Typography className={classes.date}>
-            today is {format(new Date(), 'MMMM do' + ', ' + 'Y')}. so happy you're here! 
+            today is {format(new Date(), 'MMMM do' + ', ' + 'Y')}. so happy you're here!
           </Typography>
           <Typography >username</Typography>
           <Avatar className={classes.avatar} src="/mario-av.png" />
