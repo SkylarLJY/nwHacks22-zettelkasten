@@ -7,12 +7,16 @@ import List from '@material-ui/core/List'
 import ListItem from '@material-ui/core/ListItem'
 import ListItemIcon from '@material-ui/core/ListItemIcon'
 import ListItemText from '@material-ui/core/ListItemText'
+<<<<<<< HEAD
+import { AddCircleOutlineOutlined, SubjectOutlined, PeopleOutlined } from '@material-ui/icons'
+=======
 import { AddCircleOutlineOutlined, SubjectOutlined } from '@material-ui/icons'
 import DeleteOutlineIcon from '@mui/icons-material/DeleteOutline';
 import SearchIcon from '@mui/icons-material/Search';
 import StickyNote2Icon from '@mui/icons-material/StickyNote2';
 import CloudIcon from '@mui/icons-material/Cloud';
 import QuestionMarkIcon from '@mui/icons-material/QuestionMark';
+>>>>>>> fancy
 import AppBar from '@material-ui/core/AppBar'
 import Toolbar from '@material-ui/core/Toolbar'
 import { format } from 'date-fns'
@@ -83,6 +87,11 @@ export default function Layout({ children }) {
       path: '/create'
     },
     {
+<<<<<<< HEAD
+      text: 'Shared Notes',
+      icon: <PeopleOutlined color="secondary" />,
+      path: '/share'
+=======
       text: 'Slipboxes',
       icon: <StickyNote2Icon color="secondary" />,
       path: '/slipbox'
@@ -101,6 +110,7 @@ export default function Layout({ children }) {
       text: 'Help',
       icon: <QuestionMarkIcon color="secondary" />,
       path: '/help'
+>>>>>>> fancy
     },
   ];
 
