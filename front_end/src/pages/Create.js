@@ -76,13 +76,13 @@ export default function Create() {
         component="h2"
         gutterBottom
       >
-        Create a New Note
+        create a new note
       </Typography>
 
       <form noValidate autoComplete="off" onSubmit={addNote}>
         <TextField className={classes.field}
           onChange={(e) => setTitle(e.target.value)}
-          label="Note Title"
+          label="note title"
           variant="outlined"
           color="secondary"
           fullWidth
@@ -91,7 +91,7 @@ export default function Create() {
         />
         <TextField className={classes.field}
           onChange={(e) => setDetails(e.target.value)}
-          label="Details"
+          label="details"
           variant="outlined"
           color="secondary"
           multiline
@@ -105,12 +105,12 @@ export default function Create() {
         <Radio value="goodbye" /> */}
 
         <FormControl className={classes.field2}>
-          <FormLabel color='primary' >Note Category</FormLabel>
+          <FormLabel color='primary' >note category</FormLabel>
           <RadioGroup value={category} onChange={(e) => setCategory(e.target.value)}>
-            <FormControlLabel value="money" control={<Radio />} label="Money" />
-            <FormControlLabel value="todos" control={<Radio />} label="Todos" />
-            <FormControlLabel value="reminders" control={<Radio />} label="Reminders" />
-            <FormControlLabel value="work" control={<Radio />} label="Work" />
+            <FormControlLabel value="money" control={<Radio />} label="money" />
+            <FormControlLabel value="todos" control={<Radio />} label="todos" />
+            <FormControlLabel value="reminders" control={<Radio />} label="reminders" />
+            <FormControlLabel value="work" control={<Radio />} label="work" />
           </RadioGroup>
         </FormControl>
 
@@ -119,7 +119,7 @@ export default function Create() {
           color="secondary"
           variant="contained"
           endIcon={<KeyboardArrowRightIcon />}>
-          Submit
+          submit
         </Button>
       </form>
 

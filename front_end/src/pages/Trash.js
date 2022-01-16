@@ -29,7 +29,7 @@ export default function Trash() {
                 component="h2"
                 gutterBottom
             >
-                Trash
+                trash
             </Typography>
 
 

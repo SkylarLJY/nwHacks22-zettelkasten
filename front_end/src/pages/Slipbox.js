@@ -26,7 +26,7 @@ export default function Slipbox() {
                 component="h2"
                 gutterBottom
             >
-                Slipbox
+                slipbox
             </Typography>
 
 
