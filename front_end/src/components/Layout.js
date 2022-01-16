@@ -79,6 +79,11 @@ export default function Layout({ children }) {
     },
     {
       text: 'Create Note',
+      icon: <AddCircleOutlineOutlined color="secondary" />,
+      path: '/create'
+    },
+    {
+      text: 'Slipboxes',
       icon: <StickyNote2Icon color="secondary" />,
       path: '/create'
     },
