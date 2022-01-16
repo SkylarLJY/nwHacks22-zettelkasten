@@ -85,7 +85,7 @@ export default function Layout({ children }) {
     {
       text: 'Slipboxes',
       icon: <StickyNote2Icon color="secondary" />,
-      path: '/create'
+      path: '/slipbox'
     },
     {
       text: 'Database',
