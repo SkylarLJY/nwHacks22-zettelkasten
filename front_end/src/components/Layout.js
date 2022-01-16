@@ -68,7 +68,7 @@ export default function Layout({ children }) {
 
   const menuItems = [
     {
-      text: 'My Notes',
+      text: 'my notes',
       icon: <SubjectOutlined color="secondary" />,
       path: '/'
     },
@@ -78,27 +78,27 @@ export default function Layout({ children }) {
       path: '/search'
     },
     {
-      text: 'Create Note',
+      text: 'create note',
       icon: <AddCircleOutlineOutlined color="secondary" />,
       path: '/create'
     },
     {
-      text: 'Slipboxes',
+      text: 'slipboxes',
       icon: <StickyNote2Icon color="secondary" />,
       path: '/slipbox'
     },
     {
-      text: 'Database',
+      text: 'database',
       icon: <CloudIcon color="secondary" />,
       path: '/database'
     },
     {
-      text: 'Trash',
+      text: 'trash',
       icon: <DeleteOutlineIcon color="secondary" />,
       path: '/trash'
     },
     {
-      text: 'Help',
+      text: 'help',
       icon: <QuestionMarkIcon color="secondary" />,
       path: '/help'
     },
@@ -115,9 +115,9 @@ export default function Layout({ children }) {
       >
         <Toolbar>
           <Typography className={classes.date}>
-            Today is the {format(new Date(), 'do MMMM Y')}
+            today is {format(new Date(), 'MMMM do' + ', ' + 'Y')}. so happy you're here! 
           </Typography>
-          <Typography >Username</Typography>
+          <Typography >username</Typography>
           <Avatar className={classes.avatar} src="/mario-av.png" />
         </Toolbar>
       </AppBar>
@@ -131,7 +131,7 @@ export default function Layout({ children }) {
       >
         <div>
           <Typography variant="h5" className={classes.title}>
-            Slip Box Notes
+            slip box notes &nbsp;✏️
           </Typography>
         </div>
 

@@ -26,7 +26,7 @@ export default function Search() {
                 component="h2"
                 gutterBottom
             >
-                Search
+                what would you like to find?
             </Typography>
 
 

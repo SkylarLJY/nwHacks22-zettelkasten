@@ -3,10 +3,12 @@ import Container from '@material-ui/core/Container'
 import Masonry from 'react-masonry-css'
 import NoteCard from '../components/NoteCard'
 import noteService from '../services/notes'
+import Typography from '@material-ui/core/Typography'
 
 export default function Notes() {
   const [notes, setNotes] = useState([]);
   const [newNote, setNewNote] = useState('')
+
 
   useEffect(() => {
     noteService
@@ -38,7 +40,13 @@ export default function Notes() {
   };
 
   return (
-    <Container>
+    <Container size="sm">
+      <Typography 
+      variant="h6"
+      color="textSecondary"
+      component="h2"
+      gutterBottom
+      > let's get this bread</Typography >
       <Masonry
         breakpointCols={breakpoints}
         className="my-masonry-grid"

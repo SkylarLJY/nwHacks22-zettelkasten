@@ -58,7 +58,7 @@ export default function Slipbox() {
                 component="h2"
                 gutterBottom
             >
-                Slipbox
+                your slipboxes
             </Typography>
             <Masonry
                 breakpointCols={breakpoints}

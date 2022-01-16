@@ -21,15 +21,6 @@ const useStyles = makeStyles({
 
 export default function DatabasePage() {
     return (
-        <Container size="sm">
-            <Typography
-                variant="h6"
-                color="textSecondary"
-                component="h2"
-                gutterBottom
-            >
-                Database
-            </Typography>
-        </Container>
+        <Container size="sm"></Container>
     )
 }
