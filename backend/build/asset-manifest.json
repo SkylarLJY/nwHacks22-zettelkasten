@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/static/css/main.88be6e29.chunk.css",
+    "main.js": "/static/js/main.20dd9674.chunk.js",
+    "main.js.map": "/static/js/main.20dd9674.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.fb2bd5be.js",
+    "runtime-main.js.map": "/static/js/runtime-main.fb2bd5be.js.map",
+    "static/js/2.d7e0ecf2.chunk.js": "/static/js/2.d7e0ecf2.chunk.js",
+    "static/js/2.d7e0ecf2.chunk.js.map": "/static/js/2.d7e0ecf2.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/main.88be6e29.chunk.css.map": "/static/css/main.88be6e29.chunk.css.map",
+    "static/js/2.d7e0ecf2.chunk.js.LICENSE.txt": "/static/js/2.d7e0ecf2.chunk.js.LICENSE.txt",
+    "static/media/SlipboxCard.9ba42fc2.bin": "/static/media/SlipboxCard.9ba42fc2.bin",
+    "static/media/boxes.7bf995b7.bin": "/static/media/boxes.7bf995b7.bin"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.fb2bd5be.js",
+    "static/js/2.d7e0ecf2.chunk.js",
+    "static/css/main.88be6e29.chunk.css",
+    "static/js/main.20dd9674.chunk.js"
+  ]
+}
