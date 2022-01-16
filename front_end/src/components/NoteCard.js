@@ -19,13 +19,13 @@ const useStyles = makeStyles({
       } else {
         return green[500];
       }
-      // if (note.category == "private") {
-      //   return green[500];
-      // }
-      // if (note.category == "todos") {
-      //   return pink[500];
-      // }
-      // return blue[500];
+      if (note.category == "private") {
+        return green[500];
+      }
+      if (note.category == "todos") {
+        return pink[500];
+      }
+      return blue[500];
     },
   },
 });
