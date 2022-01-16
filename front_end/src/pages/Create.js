@@ -76,7 +76,7 @@ export default function Create() {
         component="h2"
         gutterBottom
       >
-        create a new note
+        let's create a new note
       </Typography>
 
       <form noValidate autoComplete="off" onSubmit={addNote}>

@@ -131,7 +131,7 @@ export default function Layout({ children }) {
       >
         <div>
           <Typography variant="h5" className={classes.title}>
-            slip box notes
+            slip box notes &nbsp;✏️
           </Typography>
         </div>
 

@@ -26,7 +26,7 @@ export default function Help() {
                 component="h2"
                 gutterBottom
             >
-                database
+                need some help?
             </Typography>
 
 

@@ -19,6 +19,6 @@ const useStyles = makeStyles({
 
 export default function DatabasePage() {
     return (
-        <Container></Container>
+        <Container size="sm"></Container>
     )
 }
