@@ -17,9 +17,6 @@ export default function Notes() {
   }, [])
 
 
-
-
-
   const handleDelete = id => {
     const note = notes.find(n => n.id === id)
     const changedNote = notes.filter(note => note.id !== id)
