@@ -12,6 +12,8 @@ import FormControl from '@material-ui/core/FormControl'
 import FormLabel from '@material-ui/core/FormLabel'
 import { useHistory } from 'react-router-dom'
 import noteService from '../services/notes'
+import Masonry from 'react-masonry-css'
+
 
 const useStyles = makeStyles({
 
@@ -19,6 +21,15 @@ const useStyles = makeStyles({
 
 export default function DatabasePage() {
     return (
-        <Container></Container>
+        <Container size="sm">
+            <Typography
+                variant="h6"
+                color="textSecondary"
+                component="h2"
+                gutterBottom
+            >
+                Database
+            </Typography>
+        </Container>
     )
 }
