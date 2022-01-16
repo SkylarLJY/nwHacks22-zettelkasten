@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import Container from '@material-ui/core/Container'
+import Typography from '@material-ui/core/Typography'
 import Masonry from 'react-masonry-css'
 import NoteCard from '../components/NoteCard'
 import noteService from '../services/notes'
