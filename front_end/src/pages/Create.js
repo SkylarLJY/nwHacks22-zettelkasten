@@ -105,7 +105,7 @@ export default function Create() {
         <Radio value="goodbye" /> */}
 
         <FormControl className={classes.field2}>
-          <FormLabel color='primary' >note category</FormLabel>
+          <Typography color='textSecondary' >note category</Typography>
           <RadioGroup value={category} onChange={(e) => setCategory(e.target.value)}>
             <FormControlLabel value="money" control={<Radio />} label="money" />
             <FormControlLabel value="todos" control={<Radio />} label="todos" />
