@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react'
 import Container from '@material-ui/core/Container'
+import Typography from '@material-ui/core/Typography'
 import Masonry from 'react-masonry-css'
 import NoteCard from '../components/NoteCard'
 import noteService from '../services/notes'
 import { ethers } from "ethers";
 import { noteplayground } from "../config";
 import NotePlayground from "../artifacts/contracts/NotePlayground.sol/NotePlayground.json";
-import { Typography } from '@mui/material';
 
 export default function Notes() {
   const [notes, setNotes] = useState([]);

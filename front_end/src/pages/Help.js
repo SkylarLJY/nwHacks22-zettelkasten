@@ -26,7 +26,11 @@ export default function Help() {
                 component="h2"
                 gutterBottom
             >
+<<<<<<< HEAD
                 need some help?
+=======
+                Help
+>>>>>>> 8f5c70a3cfb75c652c821551c37a522f62603cda
             </Typography>
 
 
