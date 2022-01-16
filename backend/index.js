@@ -1,3 +1,11 @@
+const aws = require('aws-sdk')
+const dynamodb = new aws.DynamoDB();
+aws.config.update({
+    region: "us-west-2",
+    // endpoint: "http://localhost:8000"
+})
+const docClient = new aws.DynamoDB.DocumentClient()
+
 const express = require('express')
 const app = express()
 
@@ -65,9 +73,31 @@ app.post('/api/notes', (request, response) => {
         id: generateId(),
     }
 
+    var params = {
+        TableName: "notes",
+        Item: {
+            "content":  body.content,
+            "date": new Date(),
+            "important": body.important || false,
+            "id": generateId().toString()
+        }
+    };
+
+    docClient.put(params, function(err, data) {
+       if (err) {
+            console.error("Unable to add note", note.content, ". Error JSON:", JSON.stringify(err, null, 2));
+            response.status(400)
+            response.send('unable to add note')
+        } else {
+            console.log("PutItem succeeded:", note.content);
+            response.json(note)
+
+       }
+    });
+
     notes = notes.concat(note)
 
-    response.json(note)
+    // response.json(note)
 })
 
 app.get('/api/notes/:id', (request, response) => {
@@ -86,6 +116,16 @@ app.delete('/api/notes/:id', (request, response) => {
     notes = notes.filter(note => note.id !== id)
 
     response.status(204).end()
+})
+
+app.post('/signup', (req, res)=>{
+    const body = req.body;
+    console.log(body)
+    if (!body.id || !body.psw){
+        res.status('400')
+        res.send('Missing fields')
+    }
+
 })
 
 const unknownEndpoint = (request, response) => {
