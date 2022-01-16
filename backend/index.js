@@ -18,22 +18,46 @@ app.use(requestLogger)
 
 let notes = [
     {
-        id: 1,
-        content: "HTML is easy",
-        date: "2020-01-10T17:30:31.098Z",
-        important: true
+        title: "Yoshi's birthday bash",
+        details: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+        category: "reminders",
+        id: 1
     },
     {
-        id: 2,
-        content: "Browser can execute only Javascript",
-        date: "2020-01-10T18:39:34.091Z",
-        important: false
+        title: "Complete my ninja training",
+        details: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took.",
+        category: "work",
+        id: 2
     },
     {
-        id: 3,
-        content: "GET and POST are the most important methods of HTTP protocol",
-        date: "2020-01-10T19:20:14.298Z",
-        important: true
+        title: "Order a pizza!",
+        details: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.\nLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+        category: "todos",
+        id: 3
+    },
+    {
+        title: "Buy Yoshi's Birthday Gift",
+        details: "Mario ipsum RGB mushroom 1-up. Cloud lakitu slide fire flower pipe jump swim, lava slide koopa troopa side-scrolling starman fire bar koopa paratroopa! Pipe cloud buzzy beetle koopa troopa game over, goomba invincible Mario green shell slide koopa paratroopa fire bar question block 1985 koopa troopa fireball Mushroom Kingdom. Lava Mushroom Kingdom.",
+        category: "todos",
+        id: 4
+    },
+    {
+        title: "Pay the milkman",
+        details: "Mario ipsum RGB mushroom 1-up. Cloud lakitu slide fire flower pipe jump swim, lava slide koopa troopa side-scrolling starman fire bar koopa paratroopa! Pipe cloud buzzy beetle koopa troopa game over, goomba invincible Mario green shell slide koopa paratroopa fire bar question block 1985 koopa troopa fireball Mushroom Kingdom. Lava Mushroom Kingdom. Mario ipsum RGB mushroom 1-up. Cloud lakitu slide fire flower pipe jump swim, lava slide koopa troopa side-scrolling starman fire bar koopa paratroopa! Pipe cloud buzzy beetle koopa troopa game over, goomba invincible Mario green shell slide koopa paratroopa fire bar question block 1985 koopa troopa fireball Mushroom Kingdom. Lava Mushroom Kingdom.",
+        category: "money",
+        id: 5
+    },
+    {
+        title: "Check my promo codes",
+        details: "Mario ipsum RGB mushroom 1-up. Cloud lakitu slide fire flower pipe jump swim, lava slide koopa troopa side-scrolling starman fire bar koopa paratroopa! Pipe cloud buzzy beetle koopa troopa game over, goomba invincible Mario green shell slide koopa paratroopa fire bar question block 1985 koopa troopa fireball Mushroom Kingdom. Lava Mushroom Kingdom.",
+        category: "reminders",
+        id: 6
+    },
+    {
+        title: "Make a new website banner",
+        details: "Mario ipsum RGB mushroom 1-up. Cloud lakitu slide fire flower pipe jump swim, lava slide koopa troopa side-scrolling starman fire bar koopa paratroopa! Pipe cloud buzzy beetle koopa troopa game over, goomba invincible Mario green shell slide koopa paratroopa fire bar question block 1985 koopa troopa fireball Mushroom Kingdom. Lava Mushroom Kingdom.",
+        category: "work",
+        id: 7
     }
 ]
 
@@ -55,16 +79,10 @@ const generateId = () => {
 app.post('/api/notes', (request, response) => {
     const body = request.body
 
-    if (!body.content) {
-        return response.status(400).json({
-            error: 'content missing'
-        })
-    }
-
     const note = {
-        content: body.content,
-        important: body.important || false,
-        date: new Date(),
+        details: body.details,
+        category: body.category,
+        title: body.title,
         id: generateId(),
     }
 
