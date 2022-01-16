@@ -6,7 +6,7 @@ import noteService from '../services/notes'
 import { ethers } from "ethers";
 import { noteplayground } from "../config";
 import NotePlayground from "../artifacts/contracts/NotePlayground.sol/NotePlayground.json";
-
+import { Typography } from '@mui/material';
 
 export default function Notes() {
   const [notes, setNotes] = useState([]);

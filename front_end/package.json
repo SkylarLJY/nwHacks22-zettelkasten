@@ -48,7 +48,6 @@
       "last 1 safari version"
     ]
   },
-<<<<<<< HEAD
   "proxy": "http://localhost:3001",
   "devDependencies": {
     "@nomiclabs/hardhat-ethers": "^2.0.4",
@@ -57,7 +56,4 @@
     "ethereum-waffle": "^3.4.0",
     "ethers": "^5.5.3"
   }
-=======
-  "proxy": "http://localhost:3001"
->>>>>>> fancy
 }
