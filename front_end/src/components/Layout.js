@@ -7,7 +7,16 @@ import List from '@material-ui/core/List'
 import ListItem from '@material-ui/core/ListItem'
 import ListItemIcon from '@material-ui/core/ListItemIcon'
 import ListItemText from '@material-ui/core/ListItemText'
+<<<<<<< HEAD
 import { AddCircleOutlineOutlined, SubjectOutlined, PeopleOutlined } from '@material-ui/icons'
+=======
+import { AddCircleOutlineOutlined, SubjectOutlined } from '@material-ui/icons'
+import DeleteOutlineIcon from '@mui/icons-material/DeleteOutline';
+import SearchIcon from '@mui/icons-material/Search';
+import StickyNote2Icon from '@mui/icons-material/StickyNote2';
+import CloudIcon from '@mui/icons-material/Cloud';
+import QuestionMarkIcon from '@mui/icons-material/QuestionMark';
+>>>>>>> fancy
 import AppBar from '@material-ui/core/AppBar'
 import Toolbar from '@material-ui/core/Toolbar'
 import { format } from 'date-fns'
@@ -18,7 +27,7 @@ const drawerWidth = 240
 const useStyles = makeStyles((theme) => {
   return {
     page: {
-      background: '#f9f9f9',
+      background: '#EDDDD4',
       width: '100%',
       padding: theme.spacing(3),
     },
@@ -28,11 +37,16 @@ const useStyles = makeStyles((theme) => {
     drawer: {
       width: drawerWidth,
     },
+    MuiDrawer: {
+      backgroundColor: "#E4C5AF"
+    },
     drawerPaper: {
       width: drawerWidth,
+      backgroundColor: "#E4C5AF"
+
     },
     active: {
-      background: '#f4f4f4'
+      background: '#EDDDD4'
     },
     title: {
       padding: theme.spacing(2),
@@ -42,7 +56,7 @@ const useStyles = makeStyles((theme) => {
       marginLeft: drawerWidth,
     },
     date: {
-      flexGrow: 1
+      flexGrow: 1,
     },
     toolbar: theme.mixins.toolbar,
     avatar: {
@@ -63,14 +77,40 @@ export default function Layout({ children }) {
       path: '/'
     },
     {
+      text: 'search',
+      icon: <SearchIcon color="secondary" />,
+      path: '/search'
+    },
+    {
       text: 'Create Note',
       icon: <AddCircleOutlineOutlined color="secondary" />,
       path: '/create'
     },
     {
+<<<<<<< HEAD
       text: 'Shared Notes',
       icon: <PeopleOutlined color="secondary" />,
       path: '/share'
+=======
+      text: 'Slipboxes',
+      icon: <StickyNote2Icon color="secondary" />,
+      path: '/slipbox'
+    },
+    {
+      text: 'Database',
+      icon: <CloudIcon color="secondary" />,
+      path: '/database'
+    },
+    {
+      text: 'Trash',
+      icon: <DeleteOutlineIcon color="secondary" />,
+      path: '/trash'
+    },
+    {
+      text: 'Help',
+      icon: <QuestionMarkIcon color="secondary" />,
+      path: '/help'
+>>>>>>> fancy
     },
   ];
 
@@ -87,7 +127,7 @@ export default function Layout({ children }) {
           <Typography className={classes.date}>
             Today is the {format(new Date(), 'do MMMM Y')}
           </Typography>
-          <Typography>Username</Typography>
+          <Typography >Username</Typography>
           <Avatar className={classes.avatar} src="/mario-av.png" />
         </Toolbar>
       </AppBar>
