@@ -18,7 +18,16 @@ const useStyles = makeStyles({
   field: {
     marginTop: 20,
     marginBottom: 20,
-    display: 'block'
+    display: 'block',
+    background: "#f9f9f9"
+  },
+  field2: {
+    marginTop: 20,
+    marginBottom: 20,
+    display: 'block',
+  },
+  Label: {
+    color: "#000000"
   }
 })
 
@@ -95,8 +104,8 @@ export default function Create() {
         {/* <Radio value="hello" />
         <Radio value="goodbye" /> */}
 
-        <FormControl className={classes.field}>
-          <FormLabel>Note Category</FormLabel>
+        <FormControl className={classes.field2}>
+          <FormLabel color='primary' >Note Category</FormLabel>
           <RadioGroup value={category} onChange={(e) => setCategory(e.target.value)}>
             <FormControlLabel value="money" control={<Radio />} label="Money" />
             <FormControlLabel value="todos" control={<Radio />} label="Todos" />
